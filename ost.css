@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px;
+  color: white;
+}
+.menu {
+  display: flex;
+  list-style: none;
+}
+.menu li {
+  margin: 0 15px;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+}
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: #333;
+  }
+  .menu.active {
+      display: flex;
+  }
+  .hamburger {
+      display: flex;
+  }
+}
+
+
+
+/* Estilo geral */
+body {
+  background-color: #4f4c49;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para os parágrafos */
+p {
+  color: #ece4db;
+  font-size: 1.2rem; /* Ajuste para legibilidade */
+}
+
+/* Box shadow */
+.box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Estilo para os botões */
+button {
+  background-color: #ffffff34;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  color: #111827;
+  font-size: 1rem; /* Ajustado para que os botões fiquem com tamanho mais adequado */
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  width: 100%; /* Para tornar os botões responsivos */
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f9fafb5d;
+}
+
+button:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+  outline-offset: 2px;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo img {
+  height: 50px;
+  object-fit: contain; /* Para não distorcer a logo */
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Navbar em telas menores */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .nav-links a {
+    text-align: left;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Ajustando botões e fontes */
+  button {
+    font-size: 1.2rem; /* Aumentar um pouco o tamanho dos botões em telas pequenas */
+    padding: 1rem;
+  }
+}
+
+/* Ajustes no footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p, .footer ul, .footer a {
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  color: #bbb;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.footer .footer-about, .footer .footer-contact {
+  flex: 1 1 300px;
+  margin: 20px;
+}
+
+.footer .footer-about p, .footer .footer-contact p {
+  font-size: 14px;
+}
+
+/* Responsividade para o footer */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .footer-about, .footer .footer-contact {
+    margin: 10px 0;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  /* Ajustes finais para dispositivos pequenos */
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer .footer-about, .footer .footer-contact {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Fontes menores nos botões e fontes */
+  button {
+    font-size: 1rem; /* Fontes menores em telas bem pequenas */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
